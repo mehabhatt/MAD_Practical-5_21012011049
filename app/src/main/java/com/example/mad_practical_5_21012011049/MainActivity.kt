@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
             gallery()
         }
 
+
         val cameraButton: Button = findViewById(R.id.camera_btn)
         cameraButton.setOnClickListener {
             camera()
