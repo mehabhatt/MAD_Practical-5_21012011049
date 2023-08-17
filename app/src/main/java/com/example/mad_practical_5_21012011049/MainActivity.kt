@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.provider.AlarmClock
 import android.widget.Button
 import android.widget.EditText
 import android.provider.MediaStore
@@ -35,7 +36,10 @@ class MainActivity : AppCompatActivity() {
         cameraButton.setOnClickListener {
             camera()
         }
-
+        val alarmButton: Button = findViewById(R.id.alarm_btn)
+        alarmButton.setOnClickListener {
+            alarm()
+        }
     }
 
     fun openBrowser(url: String) {
@@ -47,11 +51,11 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun callLog() {
-        Intent(Intent.ACTION_VIEW, Uri.parse("content://call_log/calls")).also{ startActivity(it) }
+        Intent(Intent.ACTION_VIEW).setType("CallLog.Calls.CONTENT_TYPE").also{ startActivity(it) }
     }
 
     fun gallery() {
-        Intent(Intent.ACTION_PICK).setType("image/*").also { startActivity(it) }
+        Intent(Intent.ACTION_VIEW).setType("image/*").also { startActivity(it) }
     }
 
     fun camera() {
@@ -59,7 +63,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun alarm() {
-
+        Intent(AlarmClock.ACTION_SHOW_ALARMS).also { startActivity(it) }
     }
 }
 
