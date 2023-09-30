@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
     <TextView
         android:id="@+id/textView1"
         android:layout_width="0dp"
@@ -17,7 +16,6 @@
         app:layout_constraintEnd_toStartOf="@+id/editTextUrl"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
-
     <EditText
         android:id="@+id/editTextUrl"
         android:layout_width="wrap_content"
@@ -29,7 +27,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView1"
         app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/browse_btn"
         android:layout_width="wrap_content"
@@ -40,7 +37,6 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/editTextUrl"
         app:layout_constraintTop_toTopOf="@+id/editTextUrl" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="0dp"
@@ -169,6 +165,5 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/textView6"
         app:layout_constraintTop_toTopOf="@+id/camera_btn" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
